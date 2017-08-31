@@ -1,0 +1,128 @@
+@import "modules.css";
+@import "layout.css";
+@import "base.css";
+.clearfix,
+.todolist .task-info {
+  content: "";
+  display: "table";
+  clear: both;
+}
+.brand {
+  position: relative;
+  color: white;
+  font-weight: 700;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 36px;
+}
+.todolist {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: #eee;
+}
+.todolist .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  width: 100%;
+  height: 14%;
+  border-bottom: 1px solid #dddddd;
+  background-color: teal;
+  color: white;
+  font-weight: 300;
+}
+.todolist .task-list {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 36px 24px;
+  height: 86%;
+}
+.todolist .write-button {
+  bottom: 56px;
+  right: 56px;
+  z-index: 10;
+}
+.todolist .task {
+  position: relative;
+  width: 72%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.todolist .task-info {
+  position: relative;
+  margin-bottom: 8px;
+}
+.todolist .task-date {
+  position: relative;
+  font-size: 16px;
+  float: left;
+  margin-right: 8px;
+  color: #444;
+}
+.todolist .task-time {
+  position: relative;
+  font-size: 16px;
+  float: left;
+  color: #444;
+}
+.todolist .task-detail {
+  position: relative;
+  font-size: 15px;
+  color: #444;
+}
+.todolist .delete-task {
+  right: 16px;
+  top: 16px;
+  z-index: 10;
+}
+.create-task-form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 36px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.create-task-form .header {
+  color: #333333;
+  margin-bottom: 16px;
+}
+.create-task-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+  font-weight: 600;
+}
+.create-task-form input,
+.create-task-form textarea {
+  display: inline-block;
+  outline: none;
+  border: none;
+  border: 1px solid #dddddd;
+  padding: 16px;
+  margin-bottom: 16px;
+  font-family: "Verdana";
+  color: #333333;
+  font-size: 13px;
+  resize: none;
+}
+.create-task-form .submit {
+  cursor: pointer;
+  padding: 16px;
+  display: block;
+  margin-top: 16px;
+  font-size: 16px;
+  width: 50%;
+}
+.create-task-form .close-form {
+  right: 36px;
+  top: 36px;
+}
+.todolist-inactive {
+  background: #eeeeee url("../svg/file.svg") center no-repeat;
+  background-size: 30%;
+}

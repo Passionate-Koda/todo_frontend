@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>todolist</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+</head>
+<body>
+
+	<div class="top-bar-background">
+		<div class="overlay"></div>
+		<!-- <h1 class="brand">Todo.List.</h1> -->
+	</div>
+
+	<section class="views">
+		<div class="todolist todolist-inactive view">
+			<h3 class="header">Tasks</h3>
+			<div class="write-button"></div>
+			<ul class="task-list">
+			<!--	<li class="card task" >
+					<div class="delete-icon delete-task"></div>
+					<div class="task-info">
+						<h3 class="task-date">24th January, 2016</h3>
+						<h3 class="task-time">12:30pm</h3>
+					</div>
+					<p class="task-detail">slap the hell out of Mr.seamless</p>
+				</li> -->
+			</ul>
+		</div>
+		<div class="create-task create-task-active view">
+			<form class="create-task-form">
+				<div class="close-icon close-form"></div>
+				<label for="create-task-form" class="header"><h2>New Task</h2></label>
+				<label for="year">Date</label>
+				<input type="text" class="month" placeholder="Month">
+				<input type="text" class="day" placeholder="Day">
+				<input type="text" class="year" placeholder="Year">
+				<label for="task-detail">Task</label>
+				<textarea class="task-detail"></textarea>
+				<label for="time">Time</label>
+				<input type="text" class="time" placeholder="Time">
+				<input type="submit" class="submit" value="Publish">
+			</form>
+		</div>
+	</section>
+
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+.clearfix {
+	content: "";
+	display: "block";
+	clear: both;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.4);
+}
+
+.create-task {
+	bottom: -85%;
+	height: 85%;
+	opacity: 0;
+	pointer-events: none;
+	background-color: #fafafa;
+	z-index: 20;
+	box-shadow: 0px -2px 6px rgba(0,0,0,.3);
+	transition: all 0.318s ease-out;
+	-webkit-trnasition: all 0.318s ease-out;
+	-moz-transition: all 0.318s ease-out;
+	-o-transition: all 0.318s ease-out;
+}
+
+.card:extend(.clearfix) {
+	position: relative;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+	padding: 18px;
+	background-color: white;
+	-webkit-transition: all 0.618s ease-out;
+	-moz-transition: all 0.618s ease-out;
+	-o-transition: all 0.618s ease-out;
+}
+
+.write-button {
+	cursor: pointer;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	border-radius: 100%;
+	background: red url("../svg/pencil.svg") center no-repeat;
+	background-size: 60%;
+	box-shadow: 1px 3px 6px rgba(0,0,0,.3);
+}
+
+.write-button:hover {
+	box-shadow: 2px 3px 10px rgba(0,0,0,.4);
+}
+
+.delete-icon {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url("../svg/bin.svg") center no-repeat;
+	background-size: cover;
+}
+
+.close-icon {
+	cursor: pointer;
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	background: url("../svg/cancel.svg") center no-repeat;
+	background-size: cover;
+}
+
+.create-task-active {
+	pointer-events: auto;
+	opacity: 1;
+	bottom: 0;
+}
+
+.card-inactive {
+	opacity: 0 !important;
+	transform: translateX(50%);
+}
