@@ -126,3 +126,22 @@
   background: #eeeeee url("../svg/file.svg") center no-repeat;
   background-size: 30%;
 }
+.notification{
+  width: 250px;
+  height: 30px;
+  border: 2px solid green;
+  z-index: 100;
+  background-color: white;
+  position: relative;
+  left:40%
+}
+
+.notification .text{
+  font-family: "Verdana";
+  color: #333333;
+  align-items: center;
+}
+
+.noti{
+  display: none;
+}

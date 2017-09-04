@@ -6,6 +6,7 @@
   writeBtn = document.getElementsByClassName("write-button")[0],
   closeBtn = document.getElementsByClassName("close-icon")[0],
   formHandler = document.getElementsByClassName("create-task-form")[0];
+  messageHandler = document.getElementsByClassName('top-bar-background')[0]
 
   closeBtn.addEventListener('click', function(e) {
 
@@ -111,11 +112,15 @@
       addTodo(http);
 
     }
-    http.send(JSON.stringify(data));//converting to json as agains send(data);
+    http.send(JSON.stringify(data));//converting to json ;
 
     appendTodo()
+
+
     taskHandle.classList.toggle("create-task-active");
     todoHandle.classList.toggle("todolist-inactive");
+
+
 
     e.preventDefault();
 
@@ -171,8 +176,35 @@
       //is result okay?
       if(xhr.status === 200 || xhr.status === 304){
         console.log(xhr.responseText)
+        var addMsg = "Todo Successfully Added";
+        notification(addMsg)
       }
     }
+  }
+
+
+
+//to add notification when todo is added
+  function notification(msg){
+
+      var noteDiv = document.createElement("div"),
+          noteMsg = document.createElement("p"),
+          noteMsgVal
+
+      noteDiv.setAttribute('class', "notification")
+      noteMsg.setAttribute('class', "text")
+      noteMsgVal = document.createTextNode(msg)
+      noteMsg.appendChild(noteMsgVal);
+
+      noteDiv.appendChild(noteMsg)
+      messageHandler.appendChild(noteDiv)
+      console.log(msg);
+
+      //to make the notification disappear after 7 seconds.
+      setTimeout(function(){
+        noteDiv.classList.toggle("noti")
+  }, 7000)
+
   }
 
 
