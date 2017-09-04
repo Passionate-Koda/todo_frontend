@@ -1,6 +1,6 @@
 //IIFE
 (function(){
-  //colaborators to pic from html
+  //colaborators to pick from html
   var todoHandle = document.getElementsByClassName("todolist")[0],
   taskHandle = document.getElementsByClassName("create-task")[0],
   writeBtn = document.getElementsByClassName("write-button")[0],
@@ -28,10 +28,10 @@
 
           var res = JSON.parse(http.responseText);
           //console.log(res)
-            if(res.todos){
-              var todo = res.todos
+          if(res.todos){
+            var todo = res.todos
 
-              todo.forEach(function(value){
+            todo.forEach(function(value){
 
 
               var mnth = document.getElementsByClassName("month")[0],
@@ -72,59 +72,16 @@
               li.appendChild(pDetail);
 
               taskList.appendChild(li);
-
-
-
-
-
-                })
-
-
-              //console.log(todo)
-
-            }
-
+            })
           }
         }
       }
-
-
-
-
-
-
-
-
-
-
-      http.send();
-
-
-
-
-
-
-
-
-
-
+    }
+    http.send();
     taskHandle.classList.toggle("create-task-active");
     todoHandle.classList.toggle("todolist-inactive");
-
-
-
     e.preventDefault();
-
-
   }, false)
-
-
-
-
-
-
-
-
 
 
   writeBtn.addEventListener('click', function(e) {
